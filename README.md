@@ -166,11 +166,11 @@ GaSDK.logout();
 public void call_billing()
 {
     String productID = "thb.stand.gg.pack8";
-    String productName = "Mua gói 100KNB";
+    String productName = "Package 100KNB";
     String currencyUnit = "USD";
-    String amount = "22000";
+    String amount = "0.99";
     String serverID       = "S1";
-    String characterID    = "Character_ID";
+    String characterID    = "RoleID";
     String extraInfo    = "";
 
     GameItemIAPObject itemIAPObject = new GameItemIAPObject(
