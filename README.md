@@ -206,3 +206,25 @@ public void call_billing()
      */
 }
 ```
+USAGE TRACKING
+--------------------
+
+```java
+GTrackingManger.getInstance().trackingStartTrial();
+GTrackingManger.getInstance().trackingTutorialCompleted();
+GTrackingManger.getInstance().doneNRU(
+        "server_id",
+        "role_id",
+        "Role Name"
+);
+/* custom event */
+GTrackingManger.getInstance().trackingEvent("level_20");
+GTrackingManger.getInstance().trackingEvent("level_20", "{\"customer_id\":\"1234\"}");
+/* example: 
+jsonContent = {"event": "event_name", "params": {"key": "value", "key2": "value2"} }
+*/
+JSONObject jsonContent = new JSONObject();
+jsonRole.put("character", "CharacterName");
+jsonRole.put("server", "ServerID");        
+GTrackingManger.getInstance().trackingEvent("event_name", jsonContent);
+```
