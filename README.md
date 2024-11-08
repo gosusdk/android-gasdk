@@ -47,6 +47,7 @@ dependencies {
     implementation 'com.google.guava:guava:31.1-android'
     implementation 'com.google.firebase:firebase-messaging:23.2.1'
     implementation 'com.google.firebase:firebase-analytics'
+    implementation("com.google.firebase:firebase-crashlytics")
     // GRPC Deps
     implementation 'io.grpc:grpc-okhttp:1.57.1'
     implementation 'io.grpc:grpc-protobuf-lite:1.57.1'
