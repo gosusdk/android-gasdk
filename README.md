@@ -168,44 +168,16 @@ GaSDK.logout();
 ```java
 public void call_billing()
 {
-    String productID = "thb.stand.gg.pack8";
-    String productName = "Package 100KNB";
-    String currencyUnit = "USD";
-    String amount = "0.99";
     String serverID       = "S1";
-    String characterID    = "RoleID";
-    String extraInfo    = "";
+    String characterID    = "123457";
+    String characterName    = "Character_ID (&%#^Ashjba";
 
-    GameItemIAPObject itemIAPObject = new GameItemIAPObject(
-        productID, 
-        productName, 
-        currencyUnit, 
-        amount, 
-        serverID, 
-        characterID, 
-        extraInfo
-    );
-    GaSDK.payment(itemIAPObject, new IGamePaymentListener() {
-        @Override
-        public void onPaymentSuccess(String message) {
-            Log.d("T123", message);
-        }
-
-        @Override
-        public void onPaymentError(String message) {
-            Log.d("T123", message);
-
-        }
-    });
+    GaSDK.showTopUp(serverID, characterID, characterName);
 
     /**
-     * productID:ID of the product
-     * productName:Name of the product
-     * currencyUnit:currency unit
-     * amount:	Price of the item
      * serverID: ID of the server
      * characterID: ID of the character
-     * extraInfo: Additional information that partners can send, which will be sent to the API to add gold after IAP payment.
+     * characterName: Name of the character
      */
 }
 ```
